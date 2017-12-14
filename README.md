@@ -13,11 +13,17 @@ they are, please let us know.
 ## Creating a new app
 
 We recommend using
-[create-react-app](https://github.com/facebookincubator/create-react-app):
+[create-react-app](https://github.com/facebookincubator/create-react-app).
+
+Even better, you can use the
+[moz-console-react-scripts](https://www.npmjs.com/package/moz-console-react-scripts)
+custom scripts that set you up to use [antd](http://ant.design/) and
+[photon-ant](https://www.npmjs.com/package/photon-ant):
 
 ```sh
-$ create-react-app foobar
+$ create-react-app foobar --scripts-version moz-console-react-scripts
 $ cd foobar
+$ yarn start
 ```
 
 The idea is to have a root component that will be used by the moz console react
@@ -38,7 +44,7 @@ To run it locally, add the `moz-console` as a dependency:
 $ yarn add moz-console
 ```
 
-and use the `moz-console.root` component in your entrypoint javascript file:
+and use the `moz-console.Root` component in your entrypoint javascript file:
 
 ```javascript
 import React from 'react';
