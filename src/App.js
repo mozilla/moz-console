@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Route, Redirect } from 'react-router-dom'
-import logo from './logo.svg'
-import './App.css'
-import { Tabs } from 'antd'
-import { createLocation } from 'history'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Route, Redirect } from 'react-router-dom';
+import logo from './logo.svg';
+import './App.css';
+import { Tabs } from 'antd';
+import { createLocation } from 'history';
 const TabPane = Tabs.TabPane;
 
 
