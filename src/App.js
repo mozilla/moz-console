@@ -12,15 +12,15 @@ const BalrogUI = <div>Balrog</div>;
 
 /* ADD YOUR APP HERE */
 const APPS = [
-  { path: "/pollbot", title: "PollBot", component: PollBotUI },
-  { path: "/symbols", title: "Symbols", component: SymbolsUI },
-  { path: "/balrog", title: "Balrog", component: BalrogUI }
+  { prefix: "pollbot", title: "PollBot", component: PollBotUI },
+  { prefix: "symbols", title: "Symbols", component: SymbolsUI },
+  { prefix: "balrog", title: "Balrog", component: BalrogUI }
 ];
 
 class App extends Component {
   onChange = key => {
     let obj = APPS[key];
-    window.history.pushState({}, obj.title, "#" + obj.path);
+    window.history.pushState({}, obj.title, "#/" + obj.prefix);
   };
 
   render() {
