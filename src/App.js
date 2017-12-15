@@ -4,10 +4,9 @@ import "./App.css";
 import { Tabs } from "antd";
 import { default as Simple } from "./Simple";
 import { default as ReactRouter } from "./ReactRouter";
+import { default as DirectorRouter } from "./DirectorRouter";
 
 const TabPane = Tabs.TabPane;
-
-const BalrogUI = <div>Balrog</div>;
 
 /* ADD YOUR APP HERE */
 const APPS = [
@@ -21,7 +20,11 @@ const APPS = [
     title: "React Router",
     component: <ReactRouter prefix="react-router" />
   },
-  { prefix: "balrog", title: "Balrog", component: BalrogUI }
+  {
+    prefix: "director-router",
+    title: "Director Router",
+    component: <DirectorRouter prefix="director-router" />
+  }
 ];
 
 class App extends Component {
