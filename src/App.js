@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Tabs } from "antd";
-const TabPane = Tabs.TabPane;
+import { default as Simple } from "./Simple";
 
-const PollBotUI = <div>PollBot</div>;
+const TabPane = Tabs.TabPane;
 
 const SymbolsUI = <div>Symbols</div>;
 
@@ -12,7 +12,11 @@ const BalrogUI = <div>Balrog</div>;
 
 /* ADD YOUR APP HERE */
 const APPS = [
-  { prefix: "pollbot", title: "PollBot", component: PollBotUI },
+  {
+    prefix: "simple",
+    title: "Simple",
+    component: <Simple prefix="simple" />
+  },
   { prefix: "symbols", title: "Symbols", component: SymbolsUI },
   { prefix: "balrog", title: "Balrog", component: BalrogUI }
 ];
