@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Router} from 'director/build/director';
 
 const Home = <div>This is the home</div>;
@@ -8,13 +9,13 @@ const Page2 = <div>This is page 2</div>;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.prefix = props.prefix;
+    this.urlPrefix = props.urlPrefix;
 
     let routes = {};
-    routes['/' + this.prefix] = () => (this.contentComponent = Home);
-    routes['/' + this.prefix + '/page1'] = () =>
+    routes['/' + this.urlPrefix] = () => (this.contentComponent = Home);
+    routes['/' + this.urlPrefix + '/page1'] = () =>
       (this.contentComponent = Page1);
-    routes['/' + this.prefix + '/page2'] = () =>
+    routes['/' + this.urlPrefix + '/page2'] = () =>
       (this.contentComponent = Page2);
     const router = new Router(routes);
 
@@ -27,10 +28,10 @@ class App extends Component {
         Some content for DirectorRouter, and a couple of links
         <ul>
           <li>
-            <a href={'#/' + this.prefix + '/page1'}>page 1</a>
+            <a href={'#/' + this.urlPrefix + '/page1'}>page 1</a>
           </li>
           <li>
-            <a href={'#/' + this.prefix + '/page2'}>page 2</a>
+            <a href={'#/' + this.urlPrefix + '/page2'}>page 2</a>
           </li>
         </ul>
         <div>The proper content:</div>
@@ -39,5 +40,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  urlPrefix: PropTypes.string.isRequired,
+};
 
 export default App;

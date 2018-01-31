@@ -13,17 +13,17 @@ const APPS = [
   {
     prefix: 'simple',
     title: 'Simple',
-    component: <Simple prefix="simple" />,
+    component: <Simple urlPrefix="simple" />,
   },
   {
     prefix: 'react-router',
     title: 'React Router',
-    component: <ReactRouter prefix="react-router" />,
+    component: <ReactRouter urlPrefix="react-router" />,
   },
   {
     prefix: 'director-router',
     title: 'Director Router',
-    component: <DirectorRouter prefix="director-router" />,
+    component: <DirectorRouter urlPrefix="director-router" />,
   },
 ];
 
