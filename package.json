@@ -15,7 +15,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "lint": "eslint *.js src",
+    "lint-fix": "yarn lint --fix"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.3",
