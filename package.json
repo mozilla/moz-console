@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.0.1",
     "director": "^1.2.8",
+    "eslint-plugin-react": "^7.6.1",
     "photon-ant": "^0.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

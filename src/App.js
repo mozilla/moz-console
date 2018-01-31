@@ -1,40 +1,40 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Tabs } from "antd";
-import { default as Simple } from "./Simple";
-import { default as ReactRouter } from "./ReactRouter";
-import { default as DirectorRouter } from "./DirectorRouter";
+import React, {Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import {Tabs} from 'antd';
+import {default as Simple} from './Simple';
+import {default as ReactRouter} from './ReactRouter';
+import {default as DirectorRouter} from './DirectorRouter';
 
 const TabPane = Tabs.TabPane;
 
 /* ADD YOUR APP HERE */
 const APPS = [
   {
-    prefix: "simple",
-    title: "Simple",
-    component: <Simple prefix="simple" />
+    prefix: 'simple',
+    title: 'Simple',
+    component: <Simple prefix="simple" />,
   },
   {
-    prefix: "react-router",
-    title: "React Router",
-    component: <ReactRouter prefix="react-router" />
+    prefix: 'react-router',
+    title: 'React Router',
+    component: <ReactRouter prefix="react-router" />,
   },
   {
-    prefix: "director-router",
-    title: "Director Router",
-    component: <DirectorRouter prefix="director-router" />
-  }
+    prefix: 'director-router',
+    title: 'Director Router',
+    component: <DirectorRouter prefix="director-router" />,
+  },
 ];
 
 class App extends Component {
   onChange = key => {
     let obj = APPS[key];
-    window.history.pushState({}, obj.title, "#/" + obj.prefix);
+    window.history.pushState({}, obj.title, '#/' + obj.prefix);
   };
 
   render() {
-    let prefix = window.location.hash.substr(2).split("/", 1)[0] || "";
+    let prefix = window.location.hash.substr(2).split('/', 1)[0] || '';
     var activeKey = 0;
     for (var i = 0; i < APPS.length; i++) {
       if (APPS[i].prefix === prefix) {

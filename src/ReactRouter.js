@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { HashRouter, Link, Route, Switch } from "react-router-dom";
+import React, {Component} from 'react';
+import {HashRouter, Link, Route, Switch} from 'react-router-dom';
 
 const Home = () => <div>This is the home</div>;
 const Page1 = () => <div>This is page 1</div>;
@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter basename={"/" + this.prefix}>
+      <HashRouter basename={'/' + this.prefix}>
         <div className="ReactRouter">
           Some content for ReactRouter, and a couple of links
           <ul>

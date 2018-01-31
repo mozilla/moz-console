@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 class App extends Component {
   constructor(props) {
@@ -12,10 +12,10 @@ class App extends Component {
         Some content for Simple, and a couple of links
         <ul>
           <li>
-            <a href={"#/" + this.prefix + "/page1"}>page 1</a>
+            <a href={'#/' + this.prefix + '/page1'}>page 1</a>
           </li>
           <li>
-            <a href={"#/" + this.prefix + "/page2"}>page 2</a>
+            <a href={'#/' + this.prefix + '/page2'}>page 2</a>
           </li>
         </ul>
       </div>
