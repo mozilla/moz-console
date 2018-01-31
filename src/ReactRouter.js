@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { HashRouter, Link, Route, Switch } from "react-router-dom";
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {HashRouter, Link, Route, Switch} from 'react-router-dom';
 
 const Home = () => <div>This is the home</div>;
 const Page1 = () => <div>This is page 1</div>;
@@ -8,12 +9,12 @@ const Page2 = () => <div>This is page 2</div>;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.prefix = props.prefix;
+    this.urlPrefix = props.urlPrefix;
   }
 
   render() {
     return (
-      <HashRouter basename={"/" + this.prefix}>
+      <HashRouter basename={'/' + this.urlPrefix}>
         <div className="ReactRouter">
           Some content for ReactRouter, and a couple of links
           <ul>
@@ -35,5 +36,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  urlPrefix: PropTypes.string.isRequired,
+};
 
 export default App;

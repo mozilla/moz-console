@@ -2,9 +2,13 @@
   "name": "moz-console",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node" : ">=8"
+  },
   "dependencies": {
     "antd": "^3.0.1",
     "director": "^1.2.8",
+    "eslint-plugin-react": "^7.6.1",
     "photon-ant": "^0.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -15,7 +19,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "lint": "eslint *.js src",
+    "lint-fix": "yarn lint --fix"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.3",

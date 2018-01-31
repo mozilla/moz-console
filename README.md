@@ -68,10 +68,14 @@ start` as usual, ...
 
 ## Publishing it with the moz-console
 
-The only thing left to do so the app is accessible with all the others at
-https://mozconsole.mozilla.org is to create a pull-request modifying the
-`package.json` to add the app as a dependency, and modifying the `src/App.js`
-file so it also includes your component:
+To make your app accessible with all the others at
+https://mozconsole.mozilla.org you'll need to:
+
+- publish your app to npm
+- create a pull-request on the
+  [moz-console](https://github.com/mozilla/moz-console/pull/4) repository
+  modifying the `package.json` to add the app as a dependency, and modifying
+  the `src/App.js` file so it also includes your component:
 
 ```javascript
 ...
@@ -92,6 +96,11 @@ class App extends Component {
   }
 }
 ```
+
+Please note that the moz-console repository enforces (using travis) the
+conformity to eslint and prettier standards. You can use `yarn run lint` (and
+`yarn run lint-fix`) to help you spot and possibly fix automatically any
+issues.
 
 
 ## CAVEATS
