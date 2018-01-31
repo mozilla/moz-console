@@ -2,6 +2,9 @@
   "name": "moz-console",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node" : ">=8"
+  },
   "dependencies": {
     "antd": "^3.0.1",
     "director": "^1.2.8",
